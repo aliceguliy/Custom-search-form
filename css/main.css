@@ -1,0 +1,205 @@
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+body {
+	background: #dad3c6;
+	margin: 0;
+	color: #000;
+	font: 16px/1.2 'Roboto', sans-serif;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #a3a19e;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #a3a19e;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #a3a19e;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #a3a19e;
+}
+
+.page {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.contact-form {
+	height: 100vh;
+	position: relative;
+	padding: 40px 0;
+}
+
+.contact-form .bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	opacity: 0.5;
+}
+
+.form {
+	position: relative;
+	z-index: 2;
+	top: calc(50% - 371px);
+	left: calc(50% -223px);
+	overflow: hidden;
+	width: 446px;
+	height: 742px;
+	margin: 0 auto;
+	background: #fff;
+	padding: 20px 40px;
+	border-radius: 3px;
+}
+
+.form h1 {
+	font: 42px/1.2 'Spirax', cursive;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.form input[type=text],
+.form input[type=email],
+.form select,
+.form textarea {
+	display: block;
+	width: 100%;
+	margin: 0 0 20px;
+	background: #f9f6f0;
+	border-radius: 3px;
+	border: 0;
+	font: italic 16px/21px Roboto, sans-serif;
+	line-height: 21px;
+	padding: 13px 20px;
+	/*color: rgba(23,27,31,0.5); прозрачность*/
+}
+
+.form textarea {
+	height: 130px;
+	resize: none;
+	/*max-height: 230px;
+	min-height: 50px;*/
+	width: 100% !important;
+}
+
+/*.form input[type=text]:focus {
+	background: red; цвет при наведении на блок
+}*/
+
+.check-list,
+.button {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+
+.check-list {
+	margin: 0 0 30px 0;
+	border-bottom: 1px solid #f9f6f0;
+}
+
+.check-list li,
+.button li {
+	float: left;
+	width: 50%;
+	margin: 0 0 20px;
+}
+
+.fake-check {
+	width: 30px;
+	height: 30px;
+	border: 2px solid #eeebe6;
+	border-radius: 2px;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+	position: relative;
+}
+
+.fake-check:after {
+	content: '';
+	width: 16px;
+	height: 8px;
+	border: 2px solid #eca22e;
+	border-width: 0 0 2px 2px;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	transform: rotate(-45deg);
+	display: none;
+}
+
+.check-list input[type='checkbox'],
+.button input[type='radio'] {
+	position: absolute;
+	left: -9999px;
+}
+
+.check-list input[type='checkbox']:checked ~label .fake-check,
+.button input[type='radio']:checked ~label .fake-button  {
+	border: 2px solid #eca22e;
+}
+
+.check-list input[type='checkbox']:checked ~label .fake-check:after,
+.button input[type='radio']:checked ~label .fake-button:after {
+	display: block;
+}
+
+.form input[type=submit] {
+	width: 230px;
+	border:0;
+	display: block;
+	margin: 50px auto;
+	background: #eca22e;
+	font: 16px/20px Roboto, sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 3px;
+	height: 52px;
+	cursor: pointer;
+}
+
+.form input[type=submit]:hover {
+	opacity: 0.8;
+}
+
+.fake-button {
+	width: 26px;
+	height: 26px;
+	border: 2px solid #eeebe6;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0 10px 0 0;
+	vertical-align: middle;
+	position: relative;
+}
+
+.fake-button:after {
+	content: '';
+	width: 14px;
+	height: 14px;
+	background: #eca22e;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+	position: absolute;
+	display: none;
+	top: 4px;
+	left: 4px;
+}
+
+
+
+/*поместить форму по центру экрана и могла растягиваться и сделать радиобаттон*/
